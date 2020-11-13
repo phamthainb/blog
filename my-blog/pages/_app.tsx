@@ -1,7 +1,13 @@
-import "../styles/globals.css";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "client/styles/global";
 
 function MyApp({ Component, pageProps }: any) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={{}}>
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
